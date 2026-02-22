@@ -2,6 +2,8 @@ import { Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import PrivacyTerms from "./pages/PrivacyTerms";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 import Home from "./pages/Home";
 import Program from "./pages/Program";
@@ -26,9 +28,12 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/legal" element={<Legal />} />
+        <Route path="/privacy-terms" element={<PrivacyTerms />} />
+
       </Routes>
 
       <Footer />
+      <ScrollToTopButton />
       <WhatsAppButton />
     </div>
   );
