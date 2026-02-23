@@ -48,7 +48,7 @@ export default function Contact() {
         [background-size:40px_40px]"
       />
 
-      <div className="relative max-w-7xl mx-auto px-4 py-24 grid md:grid-cols-2 gap-16 items-center">
+      <div className="relative max-w-7xl mx-auto  px-4 py-24 grid md:grid-cols-2 gap-16 items-center">
 
         {/* ================= LEFT SIDE ================= */}
 

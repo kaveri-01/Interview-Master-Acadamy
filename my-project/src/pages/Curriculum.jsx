@@ -28,7 +28,7 @@ export default function Curriculum() {
 
       {/* ================= TIMELINE ================= */}
 
-      <section className="py-24 relative bg-slate-950">
+      <section className="pb-10 relative bg-slate-950">
         <div className="max-w-6xl mx-auto px-4 relative">
 
           {/* Center Line */}

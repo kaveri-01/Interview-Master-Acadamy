@@ -16,7 +16,7 @@ export default function Navbar() {
 
           {/* Logo */}
           <NavLink to="/" className="text-xl font-bold text-indigo-600">
-            Interview Mastery Acadamy
+            Interview Mastery Academy
           </NavLink>
 
           {/* Desktop Menu */}
