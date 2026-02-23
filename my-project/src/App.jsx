@@ -11,7 +11,7 @@ import Curriculum from "./pages/Curriculum";
 import MockSystem from "./pages/Mocksystem";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import Legal from "./pages/Legal";
+
 import WhatsAppButton from "./components/WhatsAppButton";
 
 
@@ -27,7 +27,7 @@ export default function App() {
         <Route path="/mock-system" element={<MockSystem />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/legal" element={<Legal />} />
+        
         <Route path="/privacy-terms" element={<PrivacyTerms />} />
 
       </Routes>
