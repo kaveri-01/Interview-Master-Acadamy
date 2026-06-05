@@ -5,12 +5,14 @@ import Footer from "./components/Footer";
 import PrivacyTerms from "./pages/PrivacyTerms";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 
-import Home from "./pages/Home";
+import Home from "../src/pages/Home"
 import Program from "./pages/Program";
 import Curriculum from "./pages/Curriculum";
 import MockSystem from "./pages/Mocksystem";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Frontend from "./pages/Frontend";
+import Backend from "./pages/Backend";
 
 import WhatsAppButton from "./components/WhatsAppButton";
 
@@ -26,7 +28,8 @@ export default function App() {
         <Route path="/curriculum" element={<Curriculum />} />
         <Route path="/mock-system" element={<MockSystem />} />
         <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/courses/frontend" element={<Frontend />} />
+        <Route path="/courses/backend" element={<Backend />} />
         
         <Route path="/privacy-terms" element={<PrivacyTerms />} />
 
