@@ -61,8 +61,8 @@ export default function Home() {
 
             <div className="grid grid-cols-2 gap-6">
 
-              <HeroStat value="1000+" label="Students Trained" />
-              <HeroStat value="8+" label="Years Experience" />
+              <HeroStat value="3000+" label="Students Trained" />
+              <HeroStat value="5+" label="Years Experience" />
               <HeroStat value="10" label="Students Per Batch" />
               <HeroStat value="100%" label="Practical Learning" />
 
@@ -99,7 +99,7 @@ export default function Home() {
             <CourseCard
               title="Frontend Development"
               duration="2 Months"
-              fee="₹20,000"
+              fee="₹10,000"
             />
 
             <CourseCard
@@ -111,13 +111,13 @@ export default function Home() {
             <CourseCard
               title="Full Stack Development"
               duration="4 Months"
-              fee="₹30,000"
+              fee="₹20,000"
             />
 
             <CourseCard
               title="Full Stack + Internship"
               duration="4-6 Months"
-              fee="₹40,000"
+              fee="₹30,000"
               featured
             />
 
@@ -157,7 +157,7 @@ export default function Home() {
 
         </div>
       </section>
-      ```jsx
+    
 {/* ================= INTERNSHIP ================= */}
 
 <section className="relative py-24 overflow-hidden bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50">
