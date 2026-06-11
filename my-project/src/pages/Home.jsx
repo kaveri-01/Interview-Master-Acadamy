@@ -35,6 +35,7 @@ export default function Home() {
               <p className="text-white/80 text-lg md:text-xl max-w-xl mb-10">
                 Learn MERN Stack from scratch through live classes,
                 real projects, internship opportunities and placement support.
+                
               </p>
 
               <div className="flex flex-wrap gap-4">
