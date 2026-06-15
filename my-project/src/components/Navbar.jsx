@@ -14,7 +14,7 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 w-full bg-white/95 backdrop-blur border-b border-slate-200 shadow-sm z-[9999]">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16">
 
           {/* LOGO */}
           <NavLink
@@ -24,7 +24,7 @@ export default function Navbar() {
             <img
               src={logo}
               alt="Interview Mastery Academy"
-              className="h-12 w-12 object-contain rounded-full"
+              className="h-16 w-16 object-contain rounded-full"
             />
 
             <div>
@@ -70,6 +70,33 @@ export default function Navbar() {
                 >
                   Backend Development
                 </NavLink>
+                <NavLink
+  to="/courses/fullstack"
+  className="block px-2 py-2 hover:bg-slate-100"
+>
+  Full Stack Development
+</NavLink>
+
+<NavLink
+  to="/courses/qa-manual"
+  className="block px-2 py-2 hover:bg-slate-100"
+>
+  QA Manual Testing
+</NavLink>
+
+<NavLink
+  to="/courses/qa-automation"
+  className="block px-2 py-2 hover:bg-slate-100"
+>
+  QA Automation Testing
+</NavLink>
+
+<NavLink
+  to="/courses/salesforce"
+  className="block px-2 py-2 hover:bg-slate-100"
+>
+  Salesforce Development
+</NavLink>
 
               </div>
             </div>
