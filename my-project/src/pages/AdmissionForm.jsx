@@ -29,8 +29,11 @@ const AdmissionForm = () => {
     diplomaPercentage: "",
 
     // Graduation
+    // Graduation
     graduationInstitute: "",
     graduationYear: "",
+    graduationType: "percentage",
+    graduationResultType: "percentage",
     graduationPercentage: "",
 
     // Parent
@@ -57,6 +60,7 @@ const AdmissionForm = () => {
   };
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState(initialState);
+  
   const handleChange = (e) => {
     const { name, value, type, checked, files } = e.target;
     if (name === "mobile" || name === "parentMobile") {
@@ -72,17 +76,36 @@ const AdmissionForm = () => {
       if (!/^\d*$/.test(value)) return;
       if (value.length > 4) return;
     }
+    // 10th, 12th & Diploma Percentage
     if (
       name === "tenthPercentage" ||
       name === "twelfthPercentage" ||
-      name === "diplomaPercentage" ||
-      name === "graduationPercentage"
+      name === "diplomaPercentage"
     ) {
       if (!/^\d*$/.test(value)) return;
 
       if (value.length > 3) return;
 
       if (Number(value) > 100) return;
+    }
+
+    // Graduation Percentage / CGPA
+    if (name === "graduationPercentage") {
+      if (formData.graduationResultType === "percentage") {
+        if (!/^\d*$/.test(value)) return;
+
+        if (value.length > 3) return;
+
+        if (Number(value) > 100) return;
+      } else {
+        if (!/^\d*\.?\d*$/.test(value)) return;
+
+        const decimal = value.split(".")[1];
+
+        if (decimal && decimal.length > 2) return;
+
+        if (Number(value) > 10) return;
+      }
     }
     // Pincode
     if (name === "pincode") {
@@ -398,8 +421,24 @@ const AdmissionForm = () => {
           </div>
 
           <div>
+            <label className="block mb-2 font-semibold">Result Type</label>
+
+            <select
+              name="graduationResultType"
+              value={formData.graduationResultType}
+              onChange={handleChange}
+              className="w-full border rounded-lg p-3"
+            >
+              <option value="percentage">Percentage</option>
+              <option value="cgpa">CGPA</option>
+            </select>
+          </div>
+
+          <div>
             <label className="block mb-2 font-semibold">
-              Percentage / CGPA
+              {formData.graduationResultType === "percentage"
+                ? "Percentage"
+                : "CGPA"}
             </label>
 
             <input
@@ -407,7 +446,11 @@ const AdmissionForm = () => {
               name="graduationPercentage"
               value={formData.graduationPercentage}
               onChange={handleChange}
-              placeholder="8.2 CGPA / 82%"
+              placeholder={
+                formData.graduationResultType === "percentage"
+                  ? "Enter Percentage"
+                  : "Enter CGPA"
+              }
               className="w-full border rounded-lg p-3"
             />
           </div>
