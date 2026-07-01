@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import axiosInstance from "../configs/axiosConfig";
+import { toast } from "react-hot-toast";
 
 const AdmissionForm = () => {
   const initialState = {
@@ -54,9 +55,8 @@ const AdmissionForm = () => {
 
     declaration: false,
   };
-
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState(initialState);
-  console.log(formData, "formData");
   const handleChange = (e) => {
     const { name, value, type, checked, files } = e.target;
     if (name === "mobile" || name === "parentMobile") {
@@ -98,17 +98,21 @@ const AdmissionForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    setLoading(true);
     try {
       const response = await axiosInstance.post("/admission/create", formData);
-
-      alert(response.data.message);
-
-      setFormData(initialState);
+      console.log(response, "response");
+      if (response.data.success) {
+        toast.success(response.data.message);
+        setFormData(initialState);
+      } else {
+        toast.error("Something went wrong!");
+      }
     } catch (error) {
       console.error(error);
-
-      alert("Something went wrong!");
+      toast.error("Something went wrong!");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -118,6 +122,17 @@ const AdmissionForm = () => {
         <h1 className="text-4xl font-bold text-center text-blue-700 mb-8">
           Student Admission Form
         </h1>
+        {loading && (
+          <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
+            <div className="bg-white p-8 rounded-xl shadow-xl flex flex-col items-center">
+              <div className="w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
+
+              <p className="mt-4 font-semibold text-gray-700">
+                Submitting Admission...
+              </p>
+            </div>
+          </div>
+        )}
 
         <form
           onSubmit={handleSubmit}
