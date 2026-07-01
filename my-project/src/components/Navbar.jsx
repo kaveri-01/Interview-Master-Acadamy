@@ -1,7 +1,6 @@
-
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import logo from "../assets/logo.png"
+import logo from "../assets/logo.png";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -15,12 +14,8 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 w-full bg-white/95 backdrop-blur border-b border-slate-200 shadow-sm z-[9999]">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between h-16">
-
           {/* LOGO */}
-          <NavLink
-            to="/"
-            className="flex items-center gap-3"
-          >
+          <NavLink to="/" className="flex items-center gap-3">
             <img
               src={logo}
               alt="Interview Mastery Academy"
@@ -31,32 +26,23 @@ export default function Navbar() {
               <h1 className="text-lg md:text-xl font-bold text-indigo-600 leading-none">
                 Interview Mastery Academy
               </h1>
-
-              
-               
             </div>
           </NavLink>
 
           {/* DESKTOP MENU */}
           <nav className="hidden lg:flex items-center gap-8">
-
             <NavLink
               to="/"
-              className={({ isActive }) =>
-                isActive ? activeStyle : linkStyle
-              }
+              className={({ isActive }) => (isActive ? activeStyle : linkStyle)}
             >
               Home
             </NavLink>
 
             {/* COURSES */}
             <div className="relative group">
-              <button className={linkStyle}>
-                Courses ▾
-              </button>
+              <button className={linkStyle}>Courses ▾</button>
 
               <div className="absolute top-6 left-0 hidden group-hover:block bg-white border rounded-xl shadow-xl w-56 py-2">
-
                 <NavLink
                   to="/courses/frontend"
                   className="block px-2 py-2 hover:bg-slate-100"
@@ -70,78 +56,67 @@ export default function Navbar() {
                 >
                   Backend Development
                 </NavLink>
+                {/* <NavLink
+                  to="/courses/fullstack"
+                  className="block px-2 py-2 hover:bg-slate-100"
+                >
+                  Full Stack Development
+                </NavLink>
+
                 <NavLink
-  to="/courses/fullstack"
-  className="block px-2 py-2 hover:bg-slate-100"
->
-  Full Stack Development
-</NavLink>
+                  to="/courses/qa-manual"
+                  className="block px-2 py-2 hover:bg-slate-100"
+                >
+                  QA Manual Testing
+                </NavLink> */}
 
-<NavLink
-  to="/courses/qa-manual"
-  className="block px-2 py-2 hover:bg-slate-100"
->
-  QA Manual Testing
-</NavLink>
+                {/* <NavLink
+                  to="/courses/qa-automation"
+                  className="block px-2 py-2 hover:bg-slate-100"
+                >
+                  QA Automation Testing
+                </NavLink>
 
-<NavLink
-  to="/courses/qa-automation"
-  className="block px-2 py-2 hover:bg-slate-100"
->
-  QA Automation Testing
-</NavLink>
-
-<NavLink
-  to="/courses/salesforce"
-  className="block px-2 py-2 hover:bg-slate-100"
->
-  Salesforce Development
-</NavLink>
-
+                <NavLink
+                  to="/courses/salesforce"
+                  className="block px-2 py-2 hover:bg-slate-100"
+                >
+                  Salesforce Development
+                </NavLink> */}
               </div>
             </div>
 
             <NavLink
               to="/program"
-              className={({ isActive }) =>
-                isActive ? activeStyle : linkStyle
-              }
+              className={({ isActive }) => (isActive ? activeStyle : linkStyle)}
             >
               Program
             </NavLink>
 
             <NavLink
               to="/curriculum"
-              className={({ isActive }) =>
-                isActive ? activeStyle : linkStyle
-              }
+              className={({ isActive }) => (isActive ? activeStyle : linkStyle)}
             >
               Curriculum
             </NavLink>
 
             <NavLink
               to="/mock-system"
-              className={({ isActive }) =>
-                isActive ? activeStyle : linkStyle
-              }
+              className={({ isActive }) => (isActive ? activeStyle : linkStyle)}
             >
               Mock System
             </NavLink>
 
             <NavLink
               to="/about"
-              className={({ isActive }) =>
-                isActive ? activeStyle : linkStyle
-              }
+              className={({ isActive }) => (isActive ? activeStyle : linkStyle)}
             >
               About
             </NavLink>
 
             <NavLink
               to="/contact"
-              className={({ isActive }) =>
-                isActive ? activeStyle : linkStyle
-              }
+              className={({ isActive }) => (isActive ? activeStyle : linkStyle)}
             >
               Contact
             </NavLink>
@@ -158,10 +133,7 @@ export default function Navbar() {
           </div>
 
           {/* MOBILE BUTTON */}
-          <button
-            onClick={() => setOpen(!open)}
-            className="lg:hidden text-2xl"
-          >
+          <button onClick={() => setOpen(!open)} className="lg:hidden text-2xl">
             ☰
           </button>
         </div>
@@ -171,57 +143,35 @@ export default function Navbar() {
       {open && (
         <div className="lg:hidden bg-white border-t border-slate-200">
           <div className="flex flex-col gap-4 p-4">
-
             <NavLink to="/" onClick={() => setOpen(false)}>
               Home
             </NavLink>
 
-            <NavLink
-              to="/courses/frontend"
-              onClick={() => setOpen(false)}
-            >
+            <NavLink to="/courses/frontend" onClick={() => setOpen(false)}>
               Frontend Development
             </NavLink>
 
-            <NavLink
-              to="/courses/backend"
-              onClick={() => setOpen(false)}
-            >
+            <NavLink to="/courses/backend" onClick={() => setOpen(false)}>
               Backend Development
             </NavLink>
 
-            <NavLink
-              to="/program"
-              onClick={() => setOpen(false)}
-            >
+            <NavLink to="/program" onClick={() => setOpen(false)}>
               Program
             </NavLink>
 
-            <NavLink
-              to="/curriculum"
-              onClick={() => setOpen(false)}
-            >
+            <NavLink to="/curriculum" onClick={() => setOpen(false)}>
               Curriculum
             </NavLink>
 
-            <NavLink
-              to="/mock-system"
-              onClick={() => setOpen(false)}
-            >
+            <NavLink to="/mock-system" onClick={() => setOpen(false)}>
               Mock System
             </NavLink>
 
-            <NavLink
-              to="/about"
-              onClick={() => setOpen(false)}
-            >
+            <NavLink to="/about" onClick={() => setOpen(false)}>
               About
             </NavLink>
 
-            <NavLink
-              to="/contact"
-              onClick={() => setOpen(false)}
-            >
+            <NavLink to="/contact" onClick={() => setOpen(false)}>
               Contact
             </NavLink>
 
@@ -232,11 +182,9 @@ export default function Navbar() {
             >
               Enroll Now
             </NavLink>
-
           </div>
         </div>
       )}
     </header>
   );
 }
-
