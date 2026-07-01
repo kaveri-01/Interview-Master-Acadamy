@@ -30,7 +30,7 @@ export default function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/program" element={<Program />} />
+        
         <Route path="/curriculum" element={<Curriculum />} />
         <Route path="/mock-system" element={<MockSystem />} />
         <Route path="/about" element={<About />} />
@@ -43,6 +43,7 @@ export default function App() {
         <Route path="/courses/salesforce" element={<Salesforce />} />
         <Route path="/privacy-terms" element={<PrivacyTerms />} />
         <Route path="/admissionform" element={<AdmissionForm />} />
+        <Route path="/courses/jobInterviewMasteryProgram" element={<Program/>} />
         
 
         <Route path="/signin" element={<SignIn />} />

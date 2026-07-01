@@ -159,22 +159,12 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <CourseCard
-              title="Frontend Development"
-              duration="2 Months"
-              fee="₹10,000"
-              description="Learn HTML, CSS, JavaScript and React to build modern responsive websites."
-            />
-            <CourseCard
-              title="Backend Development"
-              duration="2 Months"
-              fee="₹10,000"
-              description="Learn Node.js, Express.js, MongoDB and REST API development."
-            />
+            
+            
             <CourseCard
               title="Full Stack Development"
               duration="4 Months"
-              fee="₹20,000"
+              fee="₹30,000"
               description="Frontend + Backend + Docker + Redis + CI/CD + Testing Frameworks."
               featured
             />
@@ -186,13 +176,13 @@ export default function Home() {
             />
             <CourseCard
               title="QA Automation Testing"
-              duration="3 Months"
+              duration="2 Months"
               fee="₹15,000"
               description="Learn Selenium, Java, TestNG and Automation Frameworks."
             />
             <CourseCard
               title="Salesforce Development"
-              duration="3 Months"
+              duration="2 Months"
               fee="₹20,000"
               description="Learn Apex, Lightning Components and CRM Development."
             />

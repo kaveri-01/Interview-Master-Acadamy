@@ -39,7 +39,7 @@ export default function Navbar() {
             </NavLink>
 
             {/* COURSES */}
-            <div className="relative group">
+            {/* <div className="relative group">
               <button className={linkStyle}>Courses ▾</button>
 
               <div className="absolute top-6 left-0 hidden group-hover:block bg-white border rounded-xl shadow-xl w-56 py-2">
@@ -56,42 +56,24 @@ export default function Navbar() {
                 >
                   Backend Development
                 </NavLink>
-                {/* <NavLink
-                  to="/courses/fullstack"
-                  className="block px-2 py-2 hover:bg-slate-100"
-                >
-                  Full Stack Development
-                </NavLink>
-
                 <NavLink
-                  to="/courses/qa-manual"
+                  to="/courses/jobInterviewMasteryProgram"
                   className="block px-2 py-2 hover:bg-slate-100"
                 >
-                  QA Manual Testing
-                </NavLink> */}
-
-                {/* <NavLink
-                  to="/courses/qa-automation"
-                  className="block px-2 py-2 hover:bg-slate-100"
-                >
-                  QA Automation Testing
+                  Job Interview Mastery Program
                 </NavLink>
-
-                <NavLink
-                  to="/courses/salesforce"
-                  className="block px-2 py-2 hover:bg-slate-100"
-                >
-                  Salesforce Development
-                </NavLink> */}
+                
+              
+               
               </div>
-            </div>
+            </div> */}
 
-            <NavLink
+            {/* <NavLink
               to="/program"
               className={({ isActive }) => (isActive ? activeStyle : linkStyle)}
             >
               Program
-            </NavLink>
+            </NavLink> */}
 
             <NavLink
               to="/curriculum"
@@ -100,12 +82,12 @@ export default function Navbar() {
               Curriculum
             </NavLink>
 
-            <NavLink
+            {/* <NavLink
               to="/mock-system"
               className={({ isActive }) => (isActive ? activeStyle : linkStyle)}
             >
               Mock System
-            </NavLink>
+            </NavLink> */}
 
             <NavLink
               to="/about"

@@ -59,7 +59,7 @@ export default function Contact() {
               </h3>
 
               <p className="text-slate-300">
-                +91 8888704897
+                +91 8421946505
               </p>
             </div>
 

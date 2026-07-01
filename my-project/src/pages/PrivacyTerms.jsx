@@ -40,7 +40,7 @@ export default function PrivacyTerms() {
   
               <p>
                 If you have any concerns regarding your data,
-                you may contact us at: <strong>8888704897</strong>
+                you may contact us at: <strong>8421946505</strong>
               </p>
             </div>
   
@@ -83,7 +83,7 @@ export default function PrivacyTerms() {
               </p>
   
               <p className="mt-2 font-semibold text-indigo-600">
-                📞 8888704897
+                📞 8421946505
               </p>
             </div>
   
