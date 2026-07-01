@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  // baseURL: "https://rujal-x-adarsh-traders-backend.onrender.com/api/v1",
-  baseURL: "http://localhost:8000/api/v1", 
+  baseURL: "https://ima-backend.onrender.com/api/v1",
+  // baseURL: "http://localhost:8000/api/v1", 
   headers: {
     "Content-Type": "application/json",
   },
