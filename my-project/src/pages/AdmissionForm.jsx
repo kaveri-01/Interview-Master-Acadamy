@@ -63,6 +63,32 @@ const AdmissionForm = () => {
       if (!/^\d*$/.test(value)) return;
       if (value.length > 10) return;
     }
+    if (
+      name === "tenthYear" ||
+      name === "twelfthYear" ||
+      name === "diplomaYear" ||
+      name === "graduationYear"
+    ) {
+      if (!/^\d*$/.test(value)) return;
+      if (value.length > 4) return;
+    }
+    if (
+      name === "tenthPercentage" ||
+      name === "twelfthPercentage" ||
+      name === "diplomaPercentage" ||
+      name === "graduationPercentage"
+    ) {
+      if (!/^\d*$/.test(value)) return;
+
+      if (value.length > 3) return;
+
+      if (Number(value) > 100) return;
+    }
+    // Pincode
+    if (name === "pincode") {
+      if (!/^\d*$/.test(value)) return;
+      if (value.length > 6) return;
+    }
     setFormData((prev) => ({
       ...prev,
       [name]:
@@ -210,13 +236,13 @@ const AdmissionForm = () => {
 
           <div>
             <label className="block mb-2 font-semibold">Passing Year</label>
-
             <input
-              type="number"
+              type="text"
               name="tenthYear"
               value={formData.tenthYear}
               onChange={handleChange}
               placeholder="2020"
+              maxLength={4}
               className="w-full border rounded-lg p-3"
             />
           </div>
@@ -229,7 +255,8 @@ const AdmissionForm = () => {
               name="tenthPercentage"
               value={formData.tenthPercentage}
               onChange={handleChange}
-              placeholder="85%"
+              placeholder="85"
+              maxLength={3}
               className="w-full border rounded-lg p-3"
             />
           </div>
@@ -460,6 +487,7 @@ const AdmissionForm = () => {
               value={formData.pincode}
               onChange={handleChange}
               placeholder="Enter Pincode"
+              maxLength={6}
               className="w-full border rounded-lg p-3"
             />
           </div>
