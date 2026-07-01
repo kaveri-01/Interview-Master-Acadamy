@@ -51,7 +51,7 @@ export default function Frontend() {
               </div>
 
               <Link
-                to="/contact"
+                to="/admissionform"
                 className="inline-block bg-white text-indigo-700 px-8 py-4 rounded-xl font-semibold hover:bg-slate-100 transition"
               >
                 Enroll Now
@@ -271,7 +271,7 @@ export default function Frontend() {
           </p>
 
           <Link
-            to="/contact"
+            to="/admissionform"
             className="inline-block bg-white text-indigo-700 px-8 py-4 rounded-xl font-semibold hover:bg-slate-100 transition"
           >
             Enroll Now

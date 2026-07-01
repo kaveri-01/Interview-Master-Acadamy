@@ -51,7 +51,7 @@ export default function QAAutomation() {
 
               <div className="flex gap-4">
                 <Link
-                  to="/contact"
+                  to="/admissionform"
                   className="bg-orange-500 hover:bg-orange-600 px-8 py-4 rounded-xl font-semibold transition"
                 >
                   Enroll Now
@@ -283,7 +283,7 @@ export default function QAAutomation() {
             </p>
 
             <Link
-              to="/contact"
+              to="/admissionform"
               className="inline-flex bg-orange-500 hover:bg-orange-600 px-8 py-4 rounded-xl font-semibold transition"
             >
               Enroll Now

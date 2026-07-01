@@ -42,7 +42,7 @@ export default function App() {
         <Route path="/courses/qa-automation" element={<QAAutomation />} />
         <Route path="/courses/salesforce" element={<Salesforce />} />
         <Route path="/privacy-terms" element={<PrivacyTerms />} />
-        <Route path="admissionform" element={<AdmissionForm />} />
+        <Route path="/admissionform" element={<AdmissionForm />} />
         
 
         <Route path="/signin" element={<SignIn />} />

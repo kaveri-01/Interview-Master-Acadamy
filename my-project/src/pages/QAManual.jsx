@@ -62,7 +62,7 @@ export default function QAManual() {
               <div className="flex gap-4">
 
                 <Link
-                  to="/contact"
+                  to="/admissionform"
                   className="bg-emerald-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-emerald-700 transition"
                 >
                   Enroll Now
@@ -384,7 +384,7 @@ export default function QAManual() {
           </p>
 
           <Link
-            to="/contact"
+            to="/admissionform"
             className="bg-white text-emerald-700 px-8 py-4 rounded-xl font-semibold hover:bg-slate-100 transition"
           >
             Enroll Now

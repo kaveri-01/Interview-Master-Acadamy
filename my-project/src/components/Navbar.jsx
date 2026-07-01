@@ -125,7 +125,7 @@ export default function Navbar() {
           {/* CTA */}
           <div className="hidden lg:block">
             <NavLink
-              to="/contact"
+              to="/admissionform"
               className="bg-indigo-600 text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-indigo-700 transition"
             >
               Enroll Now
@@ -176,7 +176,7 @@ export default function Navbar() {
             </NavLink>
 
             <NavLink
-              to="/contact"
+              to="/admissionform"
               onClick={() => setOpen(false)}
               className="bg-indigo-600 text-white px-4 py-2 rounded-lg text-center font-semibold"
             >

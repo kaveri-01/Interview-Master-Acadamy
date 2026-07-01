@@ -114,7 +114,7 @@ export default function Curriculum() {
           </h2>
 
           <Link
-            to="/contact"
+            to="/admissionform"
             className="bg-white text-indigo-700 px-8 py-3 rounded-xl font-semibold hover:bg-slate-100 transition"
           >
             Enroll Now

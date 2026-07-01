@@ -4,58 +4,65 @@ import axiosInstance from "../configs/axiosConfig";
 
 const AdmissionForm = () => {
   const initialState = {
-    // ================= Personal Details =================
-    firstName: "Kaveri",
-    lastName: "Koli",
-    gender: "Female",
-    dob: "2001-08-08",
-    mobile: "9876543210",
-    email: "kaveri@example.com",
+    // Personal Details
+    firstName: "",
+    lastName: "",
+    gender: "",
+    dob: "",
+    mobile: "",
+    email: "",
 
-    // ================= 10th Details =================
-    tenthInstitute: "New English School, Thane",
-    tenthYear: "2017",
-    tenthPercentage: "89",
+    // 10th
+    tenthInstitute: "",
+    tenthYear: "",
+    tenthPercentage: "",
 
-    // ================= 12th Details =================
-    twelfthInstitute: "Smt. CHM College",
-    twelfthYear: "2019",
-    twelfthPercentage: "78",
+    // 12th
+    twelfthInstitute: "",
+    twelfthYear: "",
+    twelfthPercentage: "",
 
-    // ================= Diploma Details =================
+    // Diploma
     diplomaInstitute: "",
     diplomaYear: "",
     diplomaPercentage: "",
 
-    // ================= Graduation Details =================
-    graduationInstitute: "University of Mumbai",
-    graduationYear: "2023",
-    graduationPercentage: "8.4 CGPA",
+    // Graduation
+    graduationInstitute: "",
+    graduationYear: "",
+    graduationPercentage: "",
 
-    // ================= Parent Details =================
-    parentName: "Ramesh Koli",
-    parentMobile: "9876501234",
+    // Parent
+    parentName: "",
+    parentMobile: "",
 
-    // ================= Address =================
-    address: "Flat No. 302, Kasarvadavali",
-    city: "Thane",
-    state: "Maharashtra",
-    pincode: "400615",
+    // Address
+    address: "",
+    city: "",
+    state: "",
+    pincode: "",
 
-    // ================= Course Details =================
-    course: "Full Stack Development",
-    batch: "Morning",
-    admissionDate: "2026-07-01",
+    // Course
+    course: "",
+    batch: "",
+    admissionDate: "",
 
-    // ================= Declaration =================
-    declaration: true,
+    // Uploads
+    studentPhoto: null,
+    aadhaar: null,
+    resume: null,
+
+    declaration: false,
   };
 
   const [formData, setFormData] = useState(initialState);
   console.log(formData, "formData");
   const handleChange = (e) => {
     const { name, value, type, checked, files } = e.target;
-
+    if (name === "mobile" || name === "parentMobile") {
+      if (!/^\d*$/.test(value)) return;
+      if (value.length > 10) return;
+    }
     setFormData((prev) => ({
       ...prev,
       [name]:
@@ -80,7 +87,7 @@ const AdmissionForm = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-100 py-10 px-5">
+    <div className="min-h-screen bg-slate-100 py-10 px-5 mt-10">
       <div className="max-w-6xl mx-auto bg-white rounded-xl shadow-lg p-8">
         <h1 className="text-4xl font-bold text-center text-blue-700 mb-8">
           Student Admission Form
@@ -163,6 +170,8 @@ const AdmissionForm = () => {
               onChange={handleChange}
               placeholder="Enter Mobile Number"
               className="w-full border rounded-lg p-3"
+              maxLength={10}
+              pattern="[0-9]{10}"
               required
             />
           </div>

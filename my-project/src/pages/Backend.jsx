@@ -232,7 +232,7 @@ export default function Backend() {
         </p>
 
         <Link
-          to="/contact"
+          to="/admissionform"
           className="bg-green-600 hover:bg-green-700 px-8 py-4 rounded-xl font-semibold transition"
         >
           Enroll Now

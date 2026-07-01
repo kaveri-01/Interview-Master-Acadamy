@@ -23,7 +23,7 @@ export default function Program() {
           </p>
 
           <Link
-            to="/contact"
+            to="/admissionform"
             className="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:scale-105 transition"
           >
             Enroll Now
@@ -202,7 +202,7 @@ export default function Program() {
           </p>
 
           <Link
-            to="/contact"
+            to="/admissionform"
             className="bg-white text-indigo-700 px-8 py-3 rounded-xl font-semibold hover:bg-slate-100 transition"
           >
             Enroll Now

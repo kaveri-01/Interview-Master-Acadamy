@@ -64,7 +64,7 @@ export default function FullStack() {
 
               <div className="flex gap-4">
                 <Link
-                  to="/contact"
+                  to="/admissionform"
                   className="bg-indigo-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-indigo-700 transition"
                 >
                   Enroll Now
@@ -277,7 +277,7 @@ export default function FullStack() {
         </h2>
 
         <Link
-          to="/contact"
+          to="/admissionform"
           className="bg-white text-indigo-700 px-8 py-4 rounded-xl font-semibold"
         >
           Enroll Now

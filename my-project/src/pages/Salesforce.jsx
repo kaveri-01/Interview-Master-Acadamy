@@ -67,7 +67,7 @@ export default function Salesforce() {
               <div className="flex gap-4">
 
                 <Link
-                  to="/contact"
+                  to="/admissionform"
                   className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition"
                 >
                   Enroll Now
@@ -406,7 +406,7 @@ export default function Salesforce() {
             </p>
 
             <Link
-              to="/contact"
+              to="/admissionform"
               className="inline-flex bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-slate-100 transition"
             >
               Enroll Now

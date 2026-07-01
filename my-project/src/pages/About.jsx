@@ -330,7 +330,7 @@ export default function About() {
           </p>
 
           <button
-            onClick={() => navigate("/contact")}
+            onClick={() => navigate("/admissionform")}
             className="bg-white text-indigo-700 px-8 py-4 rounded-xl font-semibold hover:bg-slate-100 transition shadow-lg"
           >
             Enroll Now
