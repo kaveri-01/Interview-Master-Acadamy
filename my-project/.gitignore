@@ -22,3 +22,30 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+
+# Admin
+
+# 1) Dashboard Page -> 
+# 1. Enrolled Students
+# 2. New enquiry - later
+# 3. Batches - later
+
+
+# 2) Create Course page -> name 
+# 3) View Course with batch 
+
+# 4) Create Batch page -> select course, name, date, fees, 
+# 5) View Batch with student Page -> all 
+
+# 7) Approve Student and assign batch Page
+# -new student list  display name, number, course - assign batch, select course then select batch assign
+
+
+# 8) Mark attendance and assignment Page 
+# - Select course,  batch then student list 
+# - select date student list mark 
+# - View prior data
+
+
+

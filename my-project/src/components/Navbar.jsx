@@ -23,7 +23,10 @@ export default function Navbar() {
             />
 
             <div>
-              <h1 className="text-lg md:text-xl font-bold text-indigo-600 leading-none">
+              <h1 
+              style={{
+                color: "#0234B7",
+              }} className="text-lg md:text-xl font-bold text-indigo-600 leading-none">
                 Interview Mastery Academy
               </h1>
             </div>
@@ -76,10 +79,10 @@ export default function Navbar() {
             </NavLink> */}
 
             <NavLink
-              to="/curriculum"
+              to="/portfolio-bootcamp"
               className={({ isActive }) => (isActive ? activeStyle : linkStyle)}
             >
-              Curriculum
+              Portfolio Bootcamp
             </NavLink>
 
             {/* <NavLink
@@ -107,8 +110,12 @@ export default function Navbar() {
           {/* CTA */}
           <div className="hidden lg:block">
             <NavLink
+              style={{
+                backgroundColor: "#B0E46A",
+                color: "#0234B7",
+              }}
               to="/admissionform"
-              className="bg-indigo-600 text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-indigo-700 transition"
+              className=" text-white px-4 py-2 rounded-lg text-md font-semibold hover:bg-indigo-700 transition"
             >
               Enroll Now
             </NavLink>
